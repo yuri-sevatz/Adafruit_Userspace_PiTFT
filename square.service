@@ -1,0 +1,9 @@
+[Unit]
+Description=Adafruit PiTFT Square Service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/square
+
+[Install]
+WantedBy = basic.target

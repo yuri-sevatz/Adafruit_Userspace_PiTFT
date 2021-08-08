@@ -1,0 +1,9 @@
+[Unit]
+Description=Adafruit PiTFT TFTCP Service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/tftcp
+
+[Install]
+WantedBy = basic.target

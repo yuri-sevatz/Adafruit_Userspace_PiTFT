@@ -17,9 +17,15 @@ link_directories(
 
 add_executable(nanoscreen nanoscreen.c)
 target_link_libraries(nanoscreen bcm_host)
+install(TARGETS nanoscreen RUNTIME DESTINATION bin)
+install(FILES nanoscreen.service DESTINATION lib/systemd/system)
 
 add_executable(square square.c)
 target_link_libraries(square bcm_host)
+install(TARGETS square RUNTIME DESTINATION bin)
+install(FILES square.service DESTINATION lib/systemd/system)
 
 add_executable(tftcp tftcp.c)
 target_link_libraries(tftcp bcm_host)
+install(TARGETS tftcp RUNTIME DESTINATION bin)
+install(FILES tftcp.service DESTINATION lib/systemd/system)

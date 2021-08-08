@@ -22,8 +22,11 @@ nanoscreen: nanoscreen.c
 
 install:
 	mv tftcp /usr/local/bin
+	mv tftcp.service /usr/local/lib/systemd/system
 	mv square /usr/local/bin
+	mv square.service /usr/local/lib/systemd/system
 	mv nanoscreen /usr/local/bin
+	mv nanoscreen.service /usr/local/lib/systemd/system
 
 clean:
 	rm -f tftcp square nanoscreen
