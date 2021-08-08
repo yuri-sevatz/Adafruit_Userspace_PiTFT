@@ -8,10 +8,12 @@
 // MIT license. Some insights came from Tasanakorn's fbcp utility:
 // https://github.com/tasanakorn/rpi-fbcp
 
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
+#include <sys/time.h>
 #include <linux/spi/spidev.h>
 #include <bcm_host.h>
 
