@@ -1,9 +1,14 @@
 [Unit]
 Description=Adafruit PiTFT TFTCP Service
+DefaultDependencies=no
+Requires=systemd-udevd.service
+After=systemd-udevd.service
+Before=shutdown.target
+Conflicts=shutdown.target
 
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/tftcp
 
 [Install]
-WantedBy = basic.target
+WantedBy = sysinit.target

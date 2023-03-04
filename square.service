@@ -1,9 +1,14 @@
 [Unit]
 Description=Adafruit PiTFT Square Service
+DefaultDependencies=no
+Requires=systemd-udevd.service
+After=systemd-udevd.service
+Before=shutdown.target
+Conflicts=shutdown.target
 
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/square
 
 [Install]
-WantedBy = basic.target
+WantedBy = sysinit.target
